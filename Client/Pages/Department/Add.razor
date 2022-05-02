@@ -1,0 +1,61 @@
+﻿@page "/department/add"
+@using HRAppMudBlazorProject.Shared
+@inject HttpClient _httpClient
+
+
+
+<h3>Add Department</h3>
+
+
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+
+
+
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label for="Name"> Department Name *</label>
+<input form="Name" class="form-control" @bind="@department.DeptName" />
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="form-group">
+<input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+<input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+</div>
+</div>
+</div>
+@code {
+Department department = new Department();
+protected override async Task OnInitializedAsync()
+{
+
+
+
+}
+protected async Task Save()
+{
+var response = await Http.PostAsJsonAsync("api/Departments", @department);
+Department? posResponse = await response.Content.ReadFromJsonAsync<Department>();
+if (posResponse?.ID > 0)
+{
+await JsRuntime.InvokeVoidAsync("alert", "Saved Successfully!");
+NavigationManager.NavigateTo("department");
+}
+
+
+
+}
+void Cancel()
+{
+NavigationManager.NavigateTo("department");
+}
+
+
+
+}

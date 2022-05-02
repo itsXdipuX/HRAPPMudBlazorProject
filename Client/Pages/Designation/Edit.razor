@@ -1,0 +1,53 @@
+﻿@page "/designation/edit/{Id}"
+@using HRAppMudBlazorProject.Shared
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+
+<h2>Edit Designation</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="DesignationName"> Designation Name *</label>
+            <input form="DesignationName" class="form-control" @bind="@designation.DesignationName" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="Salary"> Salary *</label>
+            <input form="Salary" class="form-control" @bind="@designation.Salary" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+            <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public string Id{ get; set; }
+    Designation designation = new Designation();
+    protected override async Task OnInitializedAsync()
+    {
+        designation = await Http.GetFromJsonAsync<Designation>("api/designations/" + Id);
+    }
+    protected async Task Save()
+    {
+        var response = await Http.PutAsJsonAsync("api/designations/" + Id, @designation);
+       
+            await JsRuntime.InvokeVoidAsync("alert", "Updated Successfully!");
+            NavigationManager.NavigateTo("designation");
+        
+
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("designation");
+    }
+
+}

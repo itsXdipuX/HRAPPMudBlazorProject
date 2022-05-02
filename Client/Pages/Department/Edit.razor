@@ -1,0 +1,47 @@
+﻿@page "/department/edit/{Id}"
+@using HRAppMudBlazorProject.Shared
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+
+<h2>Edit Department</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="DeptName"> Department Name *</label>
+            <input form="DeptName" class="form-control" @bind="@department.DeptName" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+            <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public string Id{ get; set; }
+    Department department = new Department();
+    protected override async Task OnInitializedAsync()
+    {
+        department = await Http.GetFromJsonAsync<Department>("api/departments/" + Id);
+    }
+    protected async Task Save()
+    {
+        var response = await Http.PutAsJsonAsync("api/departments/" + Id, @department);
+       
+            await JsRuntime.InvokeVoidAsync("alert", "Updated Successfully!");
+            NavigationManager.NavigateTo("department");
+        
+
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("department");
+    }
+
+}

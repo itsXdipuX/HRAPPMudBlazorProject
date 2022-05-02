@@ -1,0 +1,153 @@
+﻿@page "/employee/add"
+@using HRAppMudBlazorProject.Shared
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject HttpClient _httpClient
+
+
+
+<h3>Add Employee</h3>
+
+
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="Name"> Name *</label>
+            <input form="Name" class="form-control" @bind="@employee.Name" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="Address"> Address *</label>
+            <input form="Address" class="form-control" @bind="@employee.Address" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="Email"> Email *</label>
+            <input form="Email" class="form-control" @bind="@employee.Email" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="ContactNumber"> Contact Number *</label>
+            <input form="ContactNumber" class="form-control" @bind="@employee.ContactNumber" />
+        </div>
+    </div>
+
+    @*<div class="col-md-6">
+        <div class="form-group">
+            <label for="Sex"> Gender *</label>
+            <select @bind="@employee.Sex" class="form-control">
+                @foreach (var gender in Enum.GetValues(typeof(Gender)))
+                {
+                    <option value="@gender">@gender</option>
+                }
+            </select>
+
+        </div>
+    </div>*@
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="Sex"> Gender *</label>
+            <input form="Sex" class="form-control" @bind="@employee.Sex" />
+
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="DepartmentID"> Department *</label>
+            <select @bind="@employee.DepartmentID" class="form-control">
+                <option value="" selected >---SELECT--- </option>
+                @foreach (var department in departments)
+                {
+                    <option value="@department.ID">@department.DeptName</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="DesignationID"> Designation *</label>
+            <select @bind="@employee.DesignationID" class="form-control">
+                <option value="" selected>---SELECT---</option>
+                @foreach (var designation in designations)
+                {
+                    <option value="@designation.ID">@designation.DesignationName</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    @*<div class="col-md-6">
+        <div class="form-group">
+            <label for="JoinDate"> Join Date *</label>
+            <input form="datetime-local" class="form-control" @bind="@employee.JoinDate" />
+        </div>
+    </div>*@
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+            <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+        </div>
+    </div>
+</div>
+@code {
+    Employee employee = new Employee();
+
+    private List<Department> departments = new();
+    private List<Designation> designations = new();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        try
+        {
+            departments = await Http.GetFromJsonAsync<List<Department>>("api/Departments");
+            designations = await Http.GetFromJsonAsync<List<Designation>>("api/Designations");
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+
+
+
+    }
+
+
+    protected async Task Save()
+    {
+        /*var response =*/ await Http.PostAsJsonAsync("api/Employees", employee);
+        //Employee? posResponse = await response.Content.ReadFromJsonAsync<Employee>();
+        //if (posResponse?.ID > 0)
+        //{
+        //    await JsRuntime.InvokeVoidAsync("alert", "Saved Successfully!");
+            NavigationManager.NavigateTo("employee");
+        //}
+
+
+
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("employee");
+    }
+
+
+
+}

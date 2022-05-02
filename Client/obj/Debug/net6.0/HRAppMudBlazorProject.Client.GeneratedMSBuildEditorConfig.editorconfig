@@ -1,0 +1,103 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = HRAppMudBlazorProject.Client
+build_property.RootNamespace = HRAppMudBlazorProject.Client
+build_property.ProjectDir = D:\.NET\HRAppMudBlazorProject\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\.NET\HRAppMudBlazorProject\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Authentication.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Department/Add.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudFxBZGQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Department/DeleteDept.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudFxEZWxldGVEZXB0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Department/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudFxFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Department/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudFxJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Designation/Add.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVzaWduYXRpb25cQWRkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Designation/DeleteDesig.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVzaWduYXRpb25cRGVsZXRlRGVzaWcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Designation/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVzaWduYXRpb25cRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Designation/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVzaWduYXRpb25cSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Employee/Add.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcQWRkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Employee/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Shared/LoginDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Shared/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.NET/HRAppMudBlazorProject/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-bpcma8u2y0
+
+[D:/.NET/HRAppMudBlazorProject/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-813lya0r1v

@@ -1,0 +1,59 @@
+﻿@page "/designation"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using HRAppMudBlazorProject.Shared
+@*@attribute [Authorize]*@
+@inject HttpClient Http
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Designation</h1>
+<p><a href="/designation/add">Add</a></p>
+
+@if (designations == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Designation Name</th>
+                <th>Salary</th>
+                <th>Action</th>
+                
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var designation in designations)
+            {
+                <tr>
+                    <td>@designation.ID</td>
+                    <td>@designation.DesignationName</td>
+                    <td>@designation.Salary</td>
+                    <td><a href="/designation/edit/@designation.ID">Edit</a> | <a href="/designation/delete/@designation.ID">Delete</a></td>
+                 
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Designation> designations = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            designations = await Http.GetFromJsonAsync<List<Designation>>("api/Designations");
+        }
+        catch (AccessTokenNotAvailableException exception)
+        {
+            exception.Redirect();
+        }
+    }
+}
