@@ -18,6 +18,7 @@
                 <MudCardContent>
                     <MudTextField Label="Name" HelperText="Max. 8 characters"
                                   @bind-Value="employee.Name" For="@(() => employee.Name)" />
+                    <MudDatePicker Label="Join Date" Editable="true" @bind-Date="employee.JoinDate" />
                     <MudTextField Label="Address" Class="mt-3"
                                   @bind-Value="employee.Address" For="@(() => employee.Address)" />
                     <MudTextField Label="Email" Class="mt-3"
@@ -33,7 +34,6 @@
                             }
                         </InputSelect>
                     </div>
-                    <MudDatePicker Label="Join Date" Editable="true" @bind-Date="employee.JoinDate" />
 
                     @*<MudSelect @bind-Value="employee.DepartmentID" Label="Department" AnchorOrigin="Origin.BottomCenter">
                         @foreach (var department in departments)
@@ -77,8 +77,8 @@
 
                 </MudCardContent>
                 @*<MudCardActions>*@
-                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success" Class="ml-4 mb-4">Add</MudButton>
-                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Class="ml-4 mb-4" OnClick="Cancel">Cancel</MudButton>
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success" Class="ml-4 mb-4">Add</MudButton>
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Class="ml-4 mb-4" OnClick="Cancel">Cancel</MudButton>
                 @*</MudCardActions>*@
             </MudCard>
         </MudItem>

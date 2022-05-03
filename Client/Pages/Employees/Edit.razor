@@ -17,6 +17,7 @@
                 <MudCardContent>
                     <MudTextField Label="Name" HelperText="Max. 8 characters"
                                   @bind-Value="employee.Name" For="@(() => employee.Name)" />
+                    <MudDatePicker Label="Join Date" Editable="true" @bind-Date="employee.JoinDate" />
                     <MudTextField Label="Address" Class="mt-3"
                                   @bind-Value="employee.Address" For="@(() => employee.Address)" />
                     <MudTextField Label="Email" Class="mt-3"
@@ -39,8 +40,8 @@
                         {
                         <MudSelectItem Value="@department.ID">@department.DeptName</MudSelectItem>
                         }
-                        </MudSelect>
-                        <MudSelect @bind-Value="employee.DesignationID" Label="Designation" AnchorOrigin="Origin.BottomCenter">
+                        </MudSelect>*@
+                      @*  <MudSelect @bind-Value="employee.DesignationID" Label="Designation" AnchorOrigin="Origin.BottomCenter">
                         @foreach (var designation in designations)
                         {
                         <MudSelectItem Value="@designation.ID">@designation.DesignationName</MudSelectItem>

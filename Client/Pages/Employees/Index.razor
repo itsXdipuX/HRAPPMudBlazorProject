@@ -12,7 +12,10 @@
 
 <h1>Employee</h1>
 
-<p><a class="btn btn-primary" href="employee/add">Add</a></p>
+@*<p><a class="btn btn-primary" href="employee/add">Add</a></p>*@
+<MudButton Variant="Variant.Outlined" Color="Color.Primary" Link="/employee/add">Create</MudButton>
+<br />
+<br />
 
 @if (employees == null)
 {
@@ -45,37 +48,39 @@ else
                     @foreach (var department in departments)
                     {
                     @if (@context.DepartmentID == @department.ID)
-                    {
-                    <tr>
-                    <td> @department.DeptName</td>
-                    </tr>
+                        {
+                        <tr>
+                            <td> @department.DeptName</td>
+                        </tr>
+                        }
                     }
-                    }
-                    </table>
-            </MudTd>
+            </table>
+        </MudTd>
 
-            <MudTd DataLabel="DesignationID">
-                @*@context.DesignationID*@
-                <table>
-                    @foreach (var designation in designations)
+        <MudTd DataLabel="DesignationID">
+            @*@context.DesignationID*@
+            <table>
+                @foreach (var designation in designations)
                     {
                     @if (@context.DesignationID == @designation.ID)
-                    {
-                    <tr>
-                    <td> @designation.DesignationName</td>
-                    </tr>
+                        {
+                        <tr>
+                            <td> @designation.DesignationName</td>
+                        </tr>
+                        }
                     }
-                    }
-                    </table>
-            </MudTd>
+            </table>
+        </MudTd>
 
-            <MudTd DataLabel="Join Date">@context.JoinDate</MudTd>
-            <MudTd DataLabel="Action"> <a class="btn btn-secondary" href="/employee/edit/@context.ID">Edit</a> | 
-            <a class="btn btn-danger">Delete</a>    
-            </MudTd>
-        </RowTemplate>
+        <MudTd DataLabel="Join Date">@context.JoinDate</MudTd>
+        <MudTd DataLabel="Action">
+            <a class="btn btn-success" href="/employee/edit/@context.ID"><MudIcon Icon="@Icons.Filled.Edit" /></a>
+            @*<a class="btn btn-danger">Delete</a>    *@
+            <button class="btn btn-danger" @onclick="@(() => Delete(context.ID))"><MudIcon Icon="@Icons.Filled.DeleteForever" /></button>
+        </MudTd>
+    </RowTemplate>
 
-    </MudTable>
+</MudTable>
 }
 
 @code {
