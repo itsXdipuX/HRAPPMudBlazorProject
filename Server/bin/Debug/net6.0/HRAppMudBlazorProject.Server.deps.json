@@ -1639,6 +1639,18 @@
           }
         }
       },
+      "MudBlazor/6.0.9": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.4",
+          "Microsoft.AspNetCore.Components.Web": "6.0.4"
+        },
+        "runtime": {
+          "lib/net6.0/MudBlazor.dll": {
+            "assemblyVersion": "6.0.9.0",
+            "fileVersion": "6.0.9.0"
+          }
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -2689,7 +2701,8 @@
           "HRAppMudBlazorProject.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "6.0.4",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "6.0.4",
-          "Microsoft.Extensions.Http": "6.0.0"
+          "Microsoft.Extensions.Http": "6.0.0",
+          "MudBlazor": "6.0.9"
         },
         "runtime": {
           "HRAppMudBlazorProject.Client.dll": {}
@@ -3449,6 +3462,13 @@
       "sha512": "sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
+    },
+    "MudBlazor/6.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PDBCp76JjU6JPTECPrVh4eHySgBuuTiDN9sd0YFlhIRuKs4X5/5nePqPIm5pfZiCHscRHeTfSRLs2Kjv40u6uw==",
+      "path": "mudblazor/6.0.9",
+      "hashPath": "mudblazor.6.0.9.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

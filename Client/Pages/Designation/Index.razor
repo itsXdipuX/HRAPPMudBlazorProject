@@ -8,7 +8,7 @@
 <PageTitle>Weather forecast</PageTitle>
 
 <h1>Designation</h1>
-<p><a href="/designation/add">Add</a></p>
+<p><a class="btn btn-primary" href="/designation/add">Add</a></p>
 
 @if (designations == null)
 {
@@ -16,30 +16,21 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Designation Name</th>
-                <th>Salary</th>
-                <th>Action</th>
-                
-               
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var designation in designations)
-            {
-                <tr>
-                    <td>@designation.ID</td>
-                    <td>@designation.DesignationName</td>
-                    <td>@designation.Salary</td>
-                    <td><a href="/designation/edit/@designation.ID">Edit</a> | <a href="/designation/delete/@designation.ID">Delete</a></td>
-                 
-                </tr>
-            }
-        </tbody>
-    </table>
+     <MudTable Items="@designations" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info">
+        
+        <HeaderContent>
+            <MudTh>Designation Name</MudTh>
+            <MudTh>Salary</MudTh>
+            <MudTh>Action</MudTh>
+        </HeaderContent>
+
+        <RowTemplate>
+            <MudTd DataLabel="Designation Name">@context.DesignationName</MudTd>
+            <MudTd DataLabel="Salary">@context.Salary</MudTd>
+            <MudTd DataLabel="Action"> <a class="btn btn-secondary" href="/designation/edit/@context.ID">Edit</a> | <a class="btn btn-danger" href="/designation/delete/@context.ID">Delete</a></MudTd>
+        </RowTemplate>
+
+    </MudTable>
 }
 
 @code {

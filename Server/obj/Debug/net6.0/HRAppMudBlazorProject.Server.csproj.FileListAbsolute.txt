@@ -306,3 +306,4 @@ D:\.NET\HRAppMudBlazorProject\Server\obj\Debug\net6.0\refint\HRAppMudBlazorProje
 D:\.NET\HRAppMudBlazorProject\Server\obj\Debug\net6.0\HRAppMudBlazorProject.Server.pdb
 D:\.NET\HRAppMudBlazorProject\Server\obj\Debug\net6.0\HRAppMudBlazorProject.Server.genruntimeconfig.cache
 D:\.NET\HRAppMudBlazorProject\Server\obj\Debug\net6.0\ref\HRAppMudBlazorProject.Server.dll
+D:\.NET\HRAppMudBlazorProject\Server\bin\Debug\net6.0\MudBlazor.dll

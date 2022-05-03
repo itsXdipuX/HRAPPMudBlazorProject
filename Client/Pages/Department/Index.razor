@@ -5,10 +5,10 @@
 @*@attribute [Authorize]*@
 @inject HttpClient Http
 
-<PageTitle>Weather forecast</PageTitle>
+<PageTitle>Department</PageTitle>
 
 <h1>Department</h1>
-<p><a href="/department/add">Add</a></p>
+<p><a class="btn btn-primary" href="/department/add">Add</a></p>
 
 @if (departments == null)
 {
@@ -16,28 +16,19 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Department Name</th>
-                <th>Action</th>
-                
-               
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var department in departments)
-            {
-                <tr>
-                    <td>@department.ID</td>
-                    <td>@department.DeptName</td>
-                    <td><a href="/department/edit/@department.ID">Edit</a> | <a href="/department/delete/@department.ID">Delete</a></td>
-                 
-                </tr>
-            }
-        </tbody>
-    </table>
+    <MudTable Items="@departments" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info">
+        
+        <HeaderContent>
+            <MudTh>Department Name</MudTh>
+            <MudTh>Action</MudTh>
+        </HeaderContent>
+
+        <RowTemplate>
+            <MudTd DataLabel="Name">@context.DeptName</MudTd>
+            <MudTd DataLabel="Action"> <a class="btn btn-secondary" href="/department/edit/@context.ID">Edit</a> | <a class="btn btn-danger" href="/department/delete/@context.ID">Delete</a></MudTd>
+        </RowTemplate>
+
+    </MudTable>
 }
 
 @code {

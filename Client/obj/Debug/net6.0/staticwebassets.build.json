@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uk4EjT9gyj2nSBlkauRIuRtWZlnlwz+1eJ9JbUYD0oM=",
+  "Hash": "OS83M3/14kk3NNUKtUddzIXDyKJ/OAEdyw2T1mlFVQo=",
   "Source": "HRAppMudBlazorProject.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -32,6 +32,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.4\\staticwebassets\\AuthenticationService.js"
+    },
+    {
+      "Identity": "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\mudblazor\\6.0.9\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\mudblazor\\6.0.9\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\mudblazor\\6.0.9\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\mudblazor\\6.0.9\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\mudblazor\\6.0.9\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\mudblazor\\6.0.9\\staticwebassets\\MudBlazor.min.js"
     },
     {
       "Identity": "D:\\.NET\\HRAppMudBlazorProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
@@ -780,6 +814,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.4\\runtimes\\browser-wasm\\lib\\net6.0\\mscorlib.dll"
+    },
+    {
+      "Identity": "D:\\.NET\\HRAppMudBlazorProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\MudBlazor.dll",
+      "SourceId": "HRAppMudBlazorProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\.NET\\HRAppMudBlazorProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MudBlazor.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\mudblazor\\6.0.9\\lib\\net6.0\\MudBlazor.dll"
     },
     {
       "Identity": "D:\\.NET\\HRAppMudBlazorProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\netstandard.dll",
@@ -6968,6 +7019,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\.NET\\HRAppMudBlazorProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.InteropServices.dll"
+    },
+    {
+      "Identity": "D:\\.NET\\HRAppMudBlazorProject\\Client\\obj\\Debug\\net6.0\\build-gz\\ZTRcz5kM.gz",
+      "SourceId": "HRAppMudBlazorProject.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\.NET\\HRAppMudBlazorProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MudBlazor.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\.NET\\HRAppMudBlazorProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\MudBlazor.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\.NET\\HRAppMudBlazorProject\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\MudBlazor.dll"
     },
     {
       "Identity": "D:\\.NET\\HRAppMudBlazorProject\\Client\\obj\\Debug\\net6.0\\build-gz\\ZXkVP1iF.gz",

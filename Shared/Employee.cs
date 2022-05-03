@@ -14,6 +14,7 @@ public class Employee
     public string Email { get; set; }
     public string ContactNumber { get; set; }
     public Gender Sex { get; set; }
+    public DateTime? JoinDate { get; set; }
     public int DepartmentID { get; set; }
     public Department? Department { get; set; }
     public int DesignationID { get; set; }
@@ -22,7 +23,7 @@ public class Employee
 
 public enum Gender
 {
-    Male = 1,
-    Female = 2,
-    Others = 3,
+    Male,
+    Female,
+    Others,
 }

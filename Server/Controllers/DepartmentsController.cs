@@ -29,6 +29,20 @@ namespace HRAppMudBlazorProject.Server.Controllers
             return await _context.Department.ToListAsync();
         }
 
+        //[HttpGet("/GenderGet")]
+        [HttpGet("GenderGet")]
+        public async Task<ActionResult<IEnumerable<GenderData>>> GenderGet()
+        {
+            List<GenderData> genders = new List<GenderData>
+            {
+                new GenderData { ID = 1, Value = "Male" },
+                new GenderData { ID = 2, Value = "Female" },
+                new GenderData { ID = 3, Value = "Others" },
+
+            };
+            return Ok(genders);
+        }
+
         // GET: api/Departments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Department>> GetDepartment(int id)

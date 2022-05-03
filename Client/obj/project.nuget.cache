@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dw/zPwtEl3cTsHFCmb3cMFSFZ/wv81YLzOa6fMSPcdLMaTn3vZFu6q3eU7B4MOFYunmO80Ja+grKZ0o0quyOgg==",
+  "dgSpecHash": "aXWEiYgPtn/WR5XFVrVTM89R2CPTli7K4g3Jl2mcsbC6c9SG5UMm8wFcNNqMWk39S3BAqEGddyCLFsOMb4wxPw==",
   "success": true,
   "projectFilePath": "D:\\.NET\\HRAppMudBlazorProject\\Client\\HRAppMudBlazorProject.Client.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.jsinterop\\6.0.4\\microsoft.jsinterop.6.0.4.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.4\\microsoft.jsinterop.webassembly.6.0.4.nupkg.sha512",
+    "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\mudblazor\\6.0.9\\mudblazor.6.0.9.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\system.io.pipelines\\6.0.2\\system.io.pipelines.6.0.2.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",

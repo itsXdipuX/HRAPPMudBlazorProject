@@ -66,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcQWRkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/.NET/HRAppMudBlazorProject/Client/Pages/Employee/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/.NET/HRAppMudBlazorProject/Client/Pages/Employee/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

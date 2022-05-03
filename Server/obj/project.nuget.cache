@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JoKsSy+0NNGc2C3X4v1BrJzSBUNg6yNEDv2cQXpZTU69UkCa4GLLE5xEscZvczCttbK0+OrbwBBYMqGu9n+ygQ==",
+  "dgSpecHash": "+9nl8IQ2PURGehcojOQBBfudg+VGuuGJjUca3RnbYP7cx1mK131zXznh+KPhCXEHUbsurQhSugttKfTmJexr9A==",
   "success": true,
   "projectFilePath": "D:\\.NET\\HRAppMudBlazorProject\\Server\\HRAppMudBlazorProject.Server.csproj",
   "expectedPackageFiles": [
@@ -110,6 +110,7 @@
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\mudblazor\\6.0.9\\mudblazor.6.0.9.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\nuget.common\\5.11.0\\nuget.common.5.11.0.nupkg.sha512",

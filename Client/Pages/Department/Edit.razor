@@ -6,42 +6,47 @@
 @inject IJSRuntime JsRuntime
 
 <h2>Edit Department</h2>
-<div class="row">
-    <div class="col-md-6">
-        <div class="form-group">
-            <label for="DeptName"> Department Name *</label>
-            <input form="DeptName" class="form-control" @bind="@department.DeptName" />
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <div class="form-group">
-            <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
-            <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
-        </div>
-    </div>
-</div>
+
+<EditForm Model="@department" OnValidSubmit="Save">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12" sm="8">
+            <MudCard>
+                <MudCardContent>
+                    <MudTextField Label="Department Name"
+                                  @bind-Value="department.DeptName" For="@(() => department.DeptName)" />
+                </MudCardContent>
+                @*<MudCardActions>*@
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success" Class="ml-4 mb-4">Update</MudButton>
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Class="ml-4 mb-4" OnClick="Cancel">Cancel</MudButton>
+                @*</MudCardActions>*@
+            </MudCard>
+        </MudItem>
+
+    </MudGrid>
+</EditForm>
+
 @code {
     [Parameter]
-    public string Id{ get; set; }
+    public string Id { get; set; }
     Department department = new Department();
+
     protected override async Task OnInitializedAsync()
     {
         department = await Http.GetFromJsonAsync<Department>("api/departments/" + Id);
     }
+
     protected async Task Save()
     {
         var response = await Http.PutAsJsonAsync("api/departments/" + Id, @department);
-       
-            await JsRuntime.InvokeVoidAsync("alert", "Updated Successfully!");
-            NavigationManager.NavigateTo("department");
-        
+
+        await JsRuntime.InvokeVoidAsync("alert", "Updated Successfully!");
+        NavigationManager.NavigateTo("department");
 
     }
+
     void Cancel()
     {
         NavigationManager.NavigateTo("department");
     }
-
 }
