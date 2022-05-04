@@ -5,26 +5,25 @@
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JsRuntime
 
-<h3>Add Department</h3>
-
-<EditForm Model="@department" OnValidSubmit="Save">
-    <DataAnnotationsValidator />
-    <MudGrid>
-        <MudItem xs="12" sm="8">
-            <MudCard>
-                <MudCardContent>
-                    <MudTextField Label="Department Name"
-                                  @bind-Value="department.DeptName" For="@(() => department.DeptName)" />
-                </MudCardContent>
-                @*<MudCardActions>*@
+<MudContainer MaxWidth="MaxWidth.Small">
+    <EditForm Model="@department" OnValidSubmit="Save">
+        <DataAnnotationsValidator />
+        <MudGrid>
+            <MudItem xs="12" sm="12">
+                <h3>Add Department</h3>
+                <MudCard>
+                    <MudCardContent>
+                        <MudTextField Label="Department Name" Variant="Variant.Outlined" Class="mt-3"
+                                      @bind-Value="department.DeptName" For="@(() => department.DeptName)" />
+                    </MudCardContent>
                     <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success" Class="ml-4 mb-4">Add</MudButton>
                     <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Class="ml-4 mb-4" OnClick="Cancel">Cancel</MudButton>
-                @*</MudCardActions>*@
-            </MudCard>
-        </MudItem>
+                </MudCard>
+            </MudItem>
 
-    </MudGrid>
-</EditForm>
+        </MudGrid>
+    </EditForm>
+</MudContainer>
 
 @code {
     Department department = new Department();

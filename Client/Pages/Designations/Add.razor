@@ -5,28 +5,27 @@
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JsRuntime
 
-<h3>Add Designation</h3>
+<MudContainer MaxWidth="MaxWidth.Small">
+    <EditForm Model="@designation" OnValidSubmit="Save">
+        <DataAnnotationsValidator />
+        <MudGrid>
+            <MudItem xs="12" sm="12">
+                <h3>Add Designation</h3>
+                <MudCard>
+                    <MudCardContent>
+                        <MudTextField Label="Designation Name" Variant="Variant.Outlined" Class="mt-3"
+                                      @bind-Value="designation.DesignationName" For="@(() => designation.DesignationName)" />
+                        <MudTextField Label="Salary" Variant="Variant.Outlined" Class="mt-3"
+                                      @bind-Value="designation.Salary" For="@(() => designation.Salary)" />
+                    </MudCardContent>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success" Class="ml-4 mb-4">Add</MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Class="ml-4 mb-4" OnClick="Cancel">Cancel</MudButton>
+                </MudCard>
+            </MudItem>
 
-<EditForm Model="@designation" OnValidSubmit="Save">
-    <DataAnnotationsValidator />
-    <MudGrid>
-        <MudItem xs="12" sm="8">
-            <MudCard>
-                <MudCardContent>
-                    <MudTextField Label="Designation Name"
-                                  @bind-Value="designation.DesignationName" For="@(() => designation.DesignationName)" />
-                    <MudTextField Label="Salary"
-                                  @bind-Value="designation.Salary" For="@(() => designation.Salary)" />
-                </MudCardContent>
-                @*<MudCardActions>*@
-                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success" Class="ml-4 mb-4">Add</MudButton>
-                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Class="ml-4 mb-4" OnClick="Cancel">Cancel</MudButton>
-                @*</MudCardActions>*@
-            </MudCard>
-        </MudItem>
-
-    </MudGrid>
-</EditForm>
+        </MudGrid>
+    </EditForm>
+</MudContainer>
 
 @code {
     Designation designation = new Designation();

@@ -10,8 +10,7 @@
 <PageTitle>Department</PageTitle>
 
 <h1>Department</h1>
-@*<p><a class="btn btn-primary" Variant="Variant.Outlined" href="/department/add">Create</a></p>*@
-<MudButton Variant="Variant.Outlined" Color="Color.Primary" Link="/department/add">Create</MudButton>
+<MudButton Variant="Variant.Outlined" Color="Color.Primary" Link="/department/add"> Create</MudButton>
 <br />
 <br />
 @if (departments == null)
@@ -30,8 +29,7 @@ else
         <RowTemplate>
             <MudTd DataLabel="Name">@context.DeptName</MudTd>
             <MudTd DataLabel="Action">
-                <a class="btn btn-success" href="/department/edit/@context.ID"><MudIcon Icon="@Icons.Filled.Edit" /></a> 
-                @*<a class="btn btn-danger" href="/department/delete/@context.ID">Delete</a>*@
+                <a class="btn btn-success" href="/department/edit/@context.ID"><MudIcon Icon="@Icons.Filled.Edit" /></a>
                 <button class="btn btn-danger" @onclick="@(() => Delete(context.ID))"><MudIcon Icon="@Icons.Filled.DeleteForever" /></button>
             </MudTd>
         </RowTemplate>

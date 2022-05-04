@@ -13,16 +13,16 @@
 <MudContainer Class="mt-16 px-8" MaxWidth="MaxWidth.False">
     <MudGrid>
         <MudItem xs="12" sm="6" md="4">
-            <!-- Earnings (Monthly) Card Example -->
+            <!-- Total Employee Count -->
             <div class="col-xl-12 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card border-left-primary shadow h-100 py-2" style="background-color: #29B6F6 !important;">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Department (Total)
+                            <div class="col mr-2 text-center">
+                                <div class="h5 font-weight-bold text-white text-uppercase mb-1 text-center">
+                                    Total Employee
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">@departments.Count</div>
+                                <div class="h5 mb-0 font-weight-bold text-white text-center">@employees.Count</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -34,16 +34,16 @@
 
         </MudItem>
         <MudItem xs="12" sm="6" md="4">
-            <!-- Earnings (Monthly) Card Example -->
+            <!-- Total Department Count -->
             <div class="col-xl-12 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card border-left-primary shadow h-100 py-2" style="background-color: #29B6F6 !important;">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Employee (Total)
+                            <div class="col mr-2 text-center">
+                                <div class="h5 font-weight-bold text-white text-uppercase mb-1 text-center">
+                                    Total Department
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">@employees.Count</div>
+                                <div class="h5 mb-0 font-weight-bold text-white text-center">@departments.Count</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -54,16 +54,16 @@
             </div>
         </MudItem>
         <MudItem xs="12" sm="12" md="4">
-            <!-- Earnings (Monthly) Card Example -->
+            <!-- Total Designation Count -->
             <div class="col-xl-12 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card border-left-primary shadow h-100 py-2" style="background-color: #29B6F6 !important;">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Designation (Total)
+                            <div class="col mr-2 text-center">
+                                <div class="h5 font-weight-bold text-white text-uppercase mb-1 text-center">
+                                    Total Designation
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">@designations.Count</div>
+                                <div class="h5 mb-0 font-weight-bold text-white text-center">@designations.Count</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -74,42 +74,54 @@
             </div>
         </MudItem>
 
-        <MudItem xs="12" sm="6" md="4">
-            <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" InputData="@datas" InputLabels="@genders">
+        <MudItem xs="12" sm="6" md="6">
+            <h3 class="text-center">Chart</h3>
+            <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" InputData="@genderData" InputLabels="@genders">
                 <CustomGraphics>
                     <text class="donut-inner-text" x="47%" y="35%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="2">Total</text>
-                    <text class="donut-inner-text" x="47%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5">@datas.Sum().ToString()</text>
+                    <text class="donut-inner-text" x="47%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5">@genderData.Sum().ToString()</text>
                 </CustomGraphics>
             </MudChart>
         </MudItem>
 
-        <MudItem xs="12" sm="6" md="4">
-            
-        </MudItem>
+        @* <MudItem xs="12" sm="6" md="4">
+            <table>
+            <tr>
+            <th>Check</th>
+            <th>Count</th>
+            </tr>
+            <tr>
+            <td>D1</td>
+            <td>1</td>
+            </tr>
+            </table>
+            </MudItem>*@
 
-        <MudItem xs="12" sm="6" md="4">
+        <MudItem xs="12" sm="6" md="6">
+            <h3 class="text-center">Calender</h3>
+            <MudDatePicker PickerVariant="PickerVariant.Static" Date="@(DateTime.Today)" />
+
         </MudItem>
 
     </MudGrid>
 </MudContainer>
 
 @code {
-    public double[] datas;
-    public string[] genders = { "Male","Female","Others"};
-    //List<DashboardData> datas = new();
+    public double[] genderData;
+    public string[] genders = { "Male", "Female", "Others" };
 
     private List<Employee> employees = new();
     private List<Department> departments = new();
     private List<Designation> designations = new();
 
-     protected override async Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
-         try
+        try
         {
             departments = await Http.GetFromJsonAsync<List<Department>>("api/Departments");
             designations = await Http.GetFromJsonAsync<List<Designation>>("api/Designations");
             employees = await Http.GetFromJsonAsync<List<Employee>>("api/Employees");
-            datas = await Http.GetFromJsonAsync<double[]>("api/dashboard");
+            genderData = await Http.GetFromJsonAsync<double[]>("api/dashboard/GenderData");
         }
         catch (AccessTokenNotAvailableException exception)
         {
@@ -117,7 +129,4 @@
         }
 
     }
-    
-
-    //string[] data =  await Http.GetFromJsonAsync<>("api/Dashboard");
 }

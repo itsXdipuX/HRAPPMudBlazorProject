@@ -200,15 +200,15 @@
       "mscorlib.dll": "sha256-Q4A\/043fz702a7DDbm+JAtMHV3jKAZ9k8khztTMKp2M=",
       "netstandard.dll": "sha256-W9cwgVmBZsddVw3WVFMC5Gya92UufvbVTNR4+u7pnR0=",
       "System.Private.CoreLib.dll": "sha256-KVnZkFos\/ML\/3S2isVijfmFZXO4zEQeCga6BZvGdTbY=",
-      "HRAppMudBlazorProject.Shared.dll": "sha256-eLWLXoqdcl6leWMBIiPl1CteNkdQ4oUac5j3ghvM3bw=",
-      "HRAppMudBlazorProject.Client.dll": "sha256-ubdDKRv34pU4hBRdyjxSMGOdcn99nNxtBW4OyCC3l3A="
+      "HRAppMudBlazorProject.Shared.dll": "sha256-CcLnHJb8mtSM9JnQN63wUwWwMCdHFXjwP4wbtCD3dzQ=",
+      "HRAppMudBlazorProject.Client.dll": "sha256-iKlNd33Mesl9GykjnbCSYYvZVsrrRG1Bcua9IyyGSQQ="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "HRAppMudBlazorProject.Shared.pdb": "sha256-Yy8nBvv9WMMgWI2eoN3RqKMxcmQlaPbYNv4LKEmLsOo=",
-      "HRAppMudBlazorProject.Client.pdb": "sha256-UM02038jkAU6quPQrDWlnOJinJjHsaNTKPChInXO+dc="
+      "HRAppMudBlazorProject.Shared.pdb": "sha256-FwI3wPQxfqwpYA6emls69A1G19pLLXvhGtzlNnRi7do=",
+      "HRAppMudBlazorProject.Client.pdb": "sha256-XBI4\/0T75eIhwBUYnDMfoqPchUVV+uevTIc2nVixNI8="
     },
     "runtime": {
       "dotnet.6.0.4.8yfh810r3g.js": "sha256-WYno\/cK5MDsl5yi4T\/\/QgUskbBfhLL77i+c0uKzO9+c=",

@@ -7,11 +7,10 @@
 @*@attribute [Authorize]*@
 @inject HttpClient Http
 
-<PageTitle>Weather forecast</PageTitle>
+<PageTitle>Designation</PageTitle>
 
 <h1>Designation</h1>
-@*<p><a class="btn btn-primary" href="/designation/add">Add</a></p>*@
-<MudButton Variant="Variant.Outlined" Color="Color.Primary" Link="/designation/add">Create</MudButton>
+<MudButton Variant="Variant.Outlined" Color="Color.Primary" Link="/designation/add"> Create</MudButton>
 <br />
 <br />
 
@@ -34,7 +33,6 @@ else
             <MudTd DataLabel="Salary">@context.Salary</MudTd>
             <MudTd DataLabel="Action">
                 <a class="btn btn-success" href="/designation/edit/@context.ID"><MudIcon Icon="@Icons.Filled.Edit" /></a>
-                @*<a class="btn btn-danger" href="/designation/delete/@context.ID">Delete</a>*@
                 <button class="btn btn-danger" @onclick="@(() => Delete(context.ID))"><MudIcon Icon="@Icons.Filled.DeleteForever" /></button>
             </MudTd>
         </RowTemplate>
