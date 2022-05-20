@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aXWEiYgPtn/WR5XFVrVTM89R2CPTli7K4g3Jl2mcsbC6c9SG5UMm8wFcNNqMWk39S3BAqEGddyCLFsOMb4wxPw==",
+  "dgSpecHash": "cRi8kvbUcPbFKoaeXzkT7GG0pS6wu8HkG59BAvP6YjNt8vSQQAPCnJ/l0esQQnr167+DRQPdLhopDhmODeAcoQ==",
   "success": true,
   "projectFilePath": "D:\\.NET\\HRAppMudBlazorProject\\Client\\HRAppMudBlazorProject.Client.csproj",
   "expectedPackageFiles": [
@@ -37,7 +37,7 @@
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.4\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.4.nupkg.sha512"
+    "C:\\Users\\dipesh.chapagain\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.5\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.5.nupkg.sha512"
   ],
   "logs": []
 }
